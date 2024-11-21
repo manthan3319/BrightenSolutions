@@ -1,9 +1,10 @@
 import React from 'react'
+import SliderSection from '../SliderSection/page'
 
 const Dashboard = () => {
   return (
     <div>
-      Dashboard
+      <SliderSection/>
     </div>
   )
 }
