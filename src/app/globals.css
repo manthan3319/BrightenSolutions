@@ -3,8 +3,9 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Inter';
-  src: url('/src/app/assets/fonts/Inter/static/Inter_18pt-Regular.ttf') format('truetype');
+  font-family: "Inter";
+  src: url("/src/app/assets/fonts/Inter/static/Inter_18pt-Regular.ttf")
+    format("truetype");
   font-weight: 400;
   font-style: normal;
 }
@@ -17,20 +18,19 @@
 } */
 
 @font-face {
-  font-family: 'Poppins';
-  src: url('/src/app/assets/fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+  font-family: "Poppins";
+  src: url("/src/app/assets/fonts/Poppins/Poppins-Regular.ttf")
+    format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src: url('/src/app/assets/fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+  font-family: "Roboto";
+  src: url("/src/app/assets/fonts/Roboto/Roboto-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
-
-
 
 :root {
   --background: #ffffff;
@@ -50,6 +50,10 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.textshadow{
-    text-shadow: 0px 1px 0px;
+.textshadow {
+  text-shadow: 0px 1px 0px;
+}
+
+.consulybox {
+  box-shadow: 0px 0px 8px darkgoldenrod;
 }

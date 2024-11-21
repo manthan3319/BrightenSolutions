@@ -19,15 +19,15 @@ const page = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIsFading(true); 
+      setIsFading(true);
       setTimeout(() => {
         setCurrentText((prevText) => {
           const currentIndex = textOptions.indexOf(prevText);
           const nextIndex = (currentIndex + 1) % textOptions.length;
           return textOptions[nextIndex];
         });
-        setIsFading(false); 
-      }, 500); 
+        setIsFading(false);
+      }, 500);
     }, 3000);
 
     return () => clearInterval(interval);
@@ -43,9 +43,9 @@ const page = () => {
         backgroundAttachment: "fixed",
         height: "800px",
       }}
-      className="py-[100px] lg:max-w-[1745px] m-auto px-[20px]"
+      className="py-[100px] flex items-center"
     >
-      <div>
+      <div className="w-[100%] lg:max-w-[1745px] m-auto px-[20px] ">
         <div className="w-[50%]">
           {/* Updated Main Heading */}
           <h2 className="text-white font-roboto text-[25px] font-normal mb-[25px]">
@@ -54,7 +54,8 @@ const page = () => {
 
           <div className="h-[250px]">
             <h1 className="text-[45px] font-roboto font-semibold text-white textshadow leading-[1.3]">
-              Your Trusted <span className="text-bgorg">Technology Partner</span> for <br />
+              Your Trusted{" "}
+              <span className="text-bgorg">Technology Partner</span> for <br />
               Innovation, Growth, and Excellence in{" "}
               <span
                 className={`text-bgorg transition-opacity duration-500 ${
@@ -67,7 +68,7 @@ const page = () => {
           </div>
 
           <Link href="#">
-            <button className="mt-[20px] py-[10px] px-[20px] bg-bgorg text-white font-bold rounded-lg shadow-lg hover:opacity-90">
+            <button className="mt-[20px] py-[10px] px-[20px] bg-black border-[1px] border-gray-400 consulybox text-white font-bold rounded-lg shadow-lg hover:opacity-90">
               CONSULT BRIGHTENSOLUTIONS
             </button>
           </Link>
