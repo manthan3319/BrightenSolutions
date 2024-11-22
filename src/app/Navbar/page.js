@@ -12,7 +12,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="bg-black py-[25px] border-b sticky w-[100%] top-0">
+    <div className="bg-black py-[25px] border-b border-gray-600 sticky w-[100%] top-0">
       <div className="lg:max-w-[1745px] px-[20px] m-auto">
         <div className="flex justify-between items-center">
           <div className="flex flex-row gap-[20px] items-center">
@@ -70,7 +70,7 @@ const Navbar = () => {
             </div>
             <div>
               <Link
-                href="/our-work"
+                href="/Contact-us"
                 className="text-white bg-bgliniar px-[25px] text-[17px] py-[10px] font-inter rounded-lg"
               >
                 REQUEST A QUOTE
