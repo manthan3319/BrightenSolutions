@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Dashboard from "./Dashboard/page";
 
 export default function Home() {
@@ -7,6 +6,7 @@ export default function Home() {
       <div>
         <Dashboard/>
       </div>
+      
     </div>
   );
 }

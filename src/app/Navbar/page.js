@@ -4,6 +4,7 @@ import Link from "next/link";
 import Drawer from "react-modern-drawer";
 import "react-modern-drawer/dist/index.css";
 import Drawerbg from '../../../public/images/drawerbg.jpg';
+import Image from "next/image";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +13,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="bg-black py-[25px] border-b sticky w-[100%] top-0">
+    <div className="bg-black py-[25px]  sticky w-[100%] top-0 z-50">
       <div className="lg:max-w-[1745px] px-[20px] m-auto">
         <div className="flex justify-between items-center">
           <div className="flex flex-row gap-[20px] items-center">
@@ -55,7 +56,7 @@ const Navbar = () => {
 
           <div>
             <Link href="/" className="text-white font-bold font-poppins text-[25px]">
-              Logo
+              <Image src="/images/Brighten SolutionLogo White.svg" width={200} height={100} alt="logo"/>
             </Link>
           </div>
 
@@ -63,7 +64,7 @@ const Navbar = () => {
             <div>
               <Link
                 href="/Ourwork"
-                className="text-white bg-bgliniar px-[25px] text-[17px] py-[10px] font-inter rounded-lg"
+                className="text-black bg-white px-[25px] text-[17px] py-[10px] font-inter rounded-lg"
               >
                 OUR WORK
               </Link>
@@ -71,7 +72,7 @@ const Navbar = () => {
             <div>
               <Link
                 href="/our-work"
-                className="text-white bg-bgliniar px-[25px] text-[17px] py-[10px] font-inter rounded-lg"
+                className="text-black bg-white px-[25px] text-[17px] py-[10px] font-inter rounded-lg"
               >
                 REQUEST A QUOTE
               </Link>

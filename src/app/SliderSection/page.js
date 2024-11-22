@@ -1,8 +1,9 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 
-const page = () => {
+const SliderSection = () => {
   const textOptions = [
     "BrightenSolutions - Pioneers in Innovation",
     "Website Design & Development",
@@ -38,16 +39,16 @@ const page = () => {
       style={{
         width: "100%",
         backgroundImage: `url('images/sliderbg.jpg')`,
-        backgroundSize: "cover",
+        backgroundSize: "100% 100%",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
         height: "800px",
       }}
-      className="py-[100px] flex items-center"
+      className="py-[100px] flex items-center relative"
     >
-      <div className="w-[100%] lg:max-w-[1745px] m-auto px-[20px] ">
+       <div className="absolute inset-0 bg-black opacity-30 z-10"></div>
+      <div className="w-[100%] lg:max-w-[1745px] m-auto px-[20px] flex md:flex-row items-center z-20">
         <div className="w-[50%]">
-          {/* Updated Main Heading */}
           <h2 className="text-white font-roboto text-[25px] font-normal mb-[25px]">
             Empowering Businesses with Future-Ready Solutions
           </h2>
@@ -73,9 +74,12 @@ const page = () => {
             </button>
           </Link>
         </div>
+        <div className="w-[50%]">
+          <Image src="/images/Brighten Solution Monogram.svg" className="m-auto" width={400} height={400} alt="logo"/>
+        </div>
       </div>
     </div>
   );
 };
 
-export default page;
+export default SliderSection;

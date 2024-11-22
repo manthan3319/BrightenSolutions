@@ -57,3 +57,22 @@ body {
 .consulybox {
   box-shadow: 0px 0px 8px darkgoldenrod;
 }
+
+.service_card_box{
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.exp_shadow{
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+}
+.opcity{
+  opacity: 0.2;
+}
+
+.tranformation{
+  transform: rotate(180deg);
+}
+
+.innovatibox-shadow{
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+}
