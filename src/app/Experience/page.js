@@ -39,7 +39,7 @@ const Experience = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={controls}
           >
-            BrightenSolution helps organizations achieve agility, scalability,
+            BrightenSolutions helps organizations achieve agility, scalability,
             and growth. From strategy to execution, we enable your digital
             transformation with precision and care.
           </motion.p>
@@ -52,7 +52,7 @@ const Experience = () => {
           {stats.map((stat) => (
             <motion.div
               key={stat.id}
-              className="bg-gray-100 p-[20px] text-center rounded-lg exp_shadow transition-all duration-300"
+              className="bg-[#dddddd]  p-[20px] text-center rounded-lg exp_shadow transition-all duration-300"
               initial={{ opacity: 0, y: 50 }}
               animate={controls}
             >

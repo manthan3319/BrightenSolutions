@@ -17,7 +17,7 @@ const services = [
 
 const OurServices = () => {
   return (
-    <div className="relative bg-[#222222] ">
+    <div className="relative bg-[#222222] my-[170px]  Innovating-bg ">
       {/* <div>
         <Image
           src={blackShadow}
@@ -42,7 +42,7 @@ const OurServices = () => {
         <div className="text-center">
           <h1 className="xl:text-[40px] font-inter font-semibold text-white ">
             <span className="text-bgorg border-b border-gray-400 pb-[5px] mb-[15px] rounded-b-xl">
-              BrightenSolution
+              BrightenSolutions
             </span>
             <br />
             <span>

@@ -5,7 +5,7 @@ import React, { useState, useEffect } from "react";
 
 const SliderSection = () => {
   const textOptions = [
-    "BrightenSolutions - Pioneers in Innovation",
+    "BrightenSolutionss - Pioneers in Innovation",
     "Website Design & Development",
     "UI/UX Strategy & Design",
     "Digital Marketing Experts",
@@ -70,7 +70,7 @@ const SliderSection = () => {
 
           <Link href="#">
             <button className="mt-[20px] py-[10px] px-[20px] bg-black border-[1px] border-gray-400 consulybox text-white font-bold rounded-lg shadow-lg hover:opacity-90">
-              CONSULT BRIGHTENSOLUTIONS
+              CONSULT BrightenSolutionsS
             </button>
           </Link>
         </div>

@@ -76,3 +76,55 @@ body {
 .innovatibox-shadow{
   box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
 }
+
+.rightcard-crafting::after {
+  content: "";
+  position: absolute;
+  width: 45px;
+  height: 2px;
+  background:#ffffff;
+  left: 50%;
+}
+
+.rightcard-crafting {
+  background: white;
+  padding: 25px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.leftcard-crafting::after {
+  content: "";
+  position: absolute;
+  width: 45px;
+  height: 2px;
+  background: #ffffff;
+  right: 50%;
+}
+
+.leftcard-crafting {
+  background: white;
+  padding: 25px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.Innovating-bg::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 71px;
+  background: #222222;
+  top: -51px;
+  transform: rotate(-1deg);
+  left: 0;
+}
+
+.Innovating-bg::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 99px;
+  background: #222222;
+  bottom: -62px;
+  transform: rotate(2deg);
+  left: -1px;
+}

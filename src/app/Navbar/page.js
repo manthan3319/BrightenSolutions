@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Drawer from "react-modern-drawer";
 import "react-modern-drawer/dist/index.css";
@@ -8,12 +8,34 @@ import Image from "next/image";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
+
   const toggleDrawer = () => {
     setIsOpen((prevState) => !prevState);
   };
 
+  // Detect when the page is scrolled with a delay
+  useEffect(() => {
+    let timeout;
+    const handleScroll = () => {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => {
+        if (window.scrollY > 60) {
+          setIsSticky(true);
+        } else {
+          setIsSticky(false);
+        }
+      }, 5200); 
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="bg-black py-[25px]  sticky w-[100%] top-0 z-50">
+    <div className={`bg-black py-[25px] w-[100%] top-0 z-50 transition-all overflow-hidden duration-500 ${isSticky ? 'sticky top-0 transform translate-y-[-15px]' : 'translate-y-0'}`}>
       <div className="lg:max-w-[1745px] px-[20px] m-auto">
         <div className="flex justify-between items-center">
           <div className="flex flex-row gap-[20px] items-center">
@@ -63,7 +85,7 @@ const Navbar = () => {
           <div className="flex flex-row gap-[20px]">
             <div>
               <Link
-                href="/Gallery"
+                href="/Ourwork"
                 className="text-black bg-white px-[25px] text-[17px] py-[10px] font-inter rounded-lg"
               >
                 OUR WORK
@@ -71,7 +93,7 @@ const Navbar = () => {
             </div>
             <div>
               <Link
-                href="/Contact-us"
+                href="/our-work"
                 className="text-black bg-white px-[25px] text-[17px] py-[10px] font-inter rounded-lg"
               >
                 REQUEST A QUOTE

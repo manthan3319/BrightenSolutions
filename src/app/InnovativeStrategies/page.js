@@ -14,14 +14,14 @@ const InnovativeStrategies = () => {
 
   return (
     <div className="lg:max-w-[1745px] px-[20px] m-auto my-[70px]">
-      <div>
+      <div className='flex lg:flex-row gap-[25px] items-center'>
         <div className="w-[50%]">
           <p className="text-bgorg font-semibold  text-[20px]">Our Strengths</p>
           <h1 className="text-[35px] font-semibold font-roboto text-gray-800 leading-snug">
-            Fuel Your Growth with BrightenSolutions'<br/> Unmatched Expertise
+            Fuel Your Growth with BrightenSolutionss'<br/> Unmatched Expertise
           </h1>
           <p className="text-gray-500 mt-[15px] w-[60%]">
-            At BrightenSolutions, we redefine success through innovative strategies and a commitment to excellence. Our strengths lie in combining creativity, technical expertise, and a client-focused approach to deliver outstanding results.
+            At BrightenSolutionss, we redefine success through innovative strategies and a commitment to excellence. Our strengths lie in combining creativity, technical expertise, and a client-focused approach to deliver outstanding results.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-[20px] mt-[30px]">
@@ -39,6 +39,10 @@ const InnovativeStrategies = () => {
               </div>
             ))}
           </div>
+        </div>
+
+        <div className='w-[50%] bg-[#555555] h-[500px]'>
+              
         </div>
       </div>
     </div>

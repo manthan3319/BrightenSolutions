@@ -14,8 +14,22 @@ import InnovativeSolutions from "../Innovative Solutions.svg";
 import StrategicPlanning from "../Strategic Planning.svg";
 import GlobalExpertise from "../Global Expertise.svg";
 import DedicatedTeam from "../Dedicated Team.svg";
-
+import creativealcoatsProject from "../creativealcoats-project.svg";
+import rajagrifoods from "../rajagrifoods.svg";
+import hazirarefractoryworks from "../hazirarefractoryworks.svg";
+import royaltonholidayhomes from "../royaltonholidayhomes.svg";
+import googleicon from "../googleicon.svg";
+import facebokicon from "../facebookicon.svg";
+import JustDialLogo from "../JustDialLogo.svg";
+import shortlistlogo from "../shortlistlogo.svg";
 export {
+    shortlistlogo,
+    googleicon,
+    JustDialLogo,
+    facebokicon,
+    hazirarefractoryworks,
+    rajagrifoods,
+    royaltonholidayhomes,
     webdesignicon,
     DedicatedTeam,
     shadowimg,
@@ -31,5 +45,6 @@ export {
     blackShadow,
     InnovativeSolutions,
     StrategicPlanning,
-    GlobalExpertise
+    GlobalExpertise,
+    creativealcoatsProject
 }

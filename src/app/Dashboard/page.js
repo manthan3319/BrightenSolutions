@@ -3,6 +3,10 @@ import SliderSection from "../SliderSection/page";
 import Experience from "../Experience/page";
 import OurServices from "../OurServices/page";
 import InnovativeStrategies from "../InnovativeStrategies/page";
+import CraftingWebsites from "../CraftingWebsites/page";
+import OurWorkHome from "../OurWorkHome/page";
+import OurClint from "../OurClint/page";
+import Review from "../Review/page";
 
 const Dashboard = () => {
   return (
@@ -11,16 +15,25 @@ const Dashboard = () => {
         <SliderSection />
       </div>
       <div>
-        <Experience/>
+        <Experience />
+      </div>
+      <div>
+        <Review/>
       </div>
       <div>
         <OurServices />
       </div>
       <div>
-        <InnovativeStrategies/>
+        <InnovativeStrategies />
       </div>
       <div>
-        <h1>hello</h1>
+        <CraftingWebsites />
+      </div>
+      <div>
+        <OurWorkHome />
+      </div>
+      <div>
+        <OurClint />
       </div>
     </div>
   );
