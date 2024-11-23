@@ -63,7 +63,7 @@ const Navbar = () => {
           <div className="flex flex-row gap-[20px]">
             <div>
               <Link
-                href="/Ourwork"
+                href="/Gallery"
                 className="text-black bg-white px-[25px] text-[17px] py-[10px] font-inter rounded-lg"
               >
                 OUR WORK
@@ -71,7 +71,7 @@ const Navbar = () => {
             </div>
             <div>
               <Link
-                href="/our-work"
+                href="/Contact-us"
                 className="text-black bg-white px-[25px] text-[17px] py-[10px] font-inter rounded-lg"
               >
                 REQUEST A QUOTE
