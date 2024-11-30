@@ -1,10 +1,11 @@
 "use client";
-import React from "react";
+import React,{Suspense, useEffect,useState} from "react";
 import Link from "next/link";
 import { useInView } from "react-intersection-observer";
 import { ServicesData } from "../data";
 import Image from "next/image";
 import { rightarrow } from "../../../public/images/Images/page";
+import FullScreenLoader from "../FullScreenLoader/page";
 
 const OurServices = () => {
   const { ref, inView } = useInView({
@@ -12,16 +13,31 @@ const OurServices = () => {
     threshold: 0.1,
   });
 
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 500);
+
+    return () => clearTimeout(timer); 
+  }, []);
+
+  if (isLoading) {
+    return <FullScreenLoader />;
+  }
+
+
   return (
+    <Suspense fallback={<FullScreenLoader />}>
     <div>
-      {/* Hero Section with background image change on scroll */}
       <div
         ref={ref}
         style={{
           width: "100%",
           backgroundImage: inView
             ? `url('images/aboutus-gif.gif')`
-            : `url('images/aboutus-placeholder.jpg')`, // Placeholder image
+            : `url('images/aboutus-placeholder.jpg')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           position: "relative",
@@ -51,7 +67,7 @@ const OurServices = () => {
             justifyContent: "center",
           }}
         >
-          <h1 className="text-white text-[50px] font-bold font-roboto">
+          <h1 className="text-white sm:text-[50px] text-[35px] font-bold font-roboto">
             OUR SERVICES
           </h1>
           <Link href="/" className="text-white flex flex-row gap-[5px]">
@@ -61,7 +77,7 @@ const OurServices = () => {
       </div>
 
       {/* Services Section */}
-      <div className="lg:max-w-[1745px] px-[20px] m-auto my-[70px] grid lg:grid-cols-3 sm:grid-cols-1 gap-6">
+      <div className="lg:max-w-[1745px] px-[20px] m-auto my-[70px] grid xl:grid-cols-3 lg:grid-cols-2 sm:grid-cols-1 gap-6">
         {ServicesData.map((service) => (
           <div key={service.id} className="service-card flex flex-col justify-between image-anime relative service-item bg-bgwhite p-[10px] shadow-lg rounded-lg overflow-hidden">
             <div className="relative z-[1]">
@@ -75,7 +91,7 @@ const OurServices = () => {
             
             <div className="p-4">
               <h2 className="text-[22px] font-semibold font-roboto text-gray-800">{service.title}</h2>
-              <p className="text-gray-600 mt-2 font-inter text-[18px]">{service.description}</p>
+              <p className="text-gray-600 mt-2 font-inter text-[18px]">{service.pare1}</p>
             </div>
 
             <div className="px-4 pb-4 relative z-[99]">
@@ -90,6 +106,7 @@ const OurServices = () => {
         ))}
       </div>
     </div>
+    </Suspense>
   );
 };
 

@@ -94,7 +94,7 @@ const Footer = () => {
             READY TO DISCUSS YOUR PROJECT?
           </h2>
           <h1 className="text-bgorg font-roboto text-[50px] font-semibold">
-            LET'S TALK
+            LET S TALK
           </h1>
           <p className="text-[20px] font-inter text-white font-normal">
             Your One-Stop Solution for Online Excellence: Website Design Surat,
@@ -105,9 +105,9 @@ const Footer = () => {
               href="/"
               className="font-roboto text-[17px] bg-bgwhite px-[15px] py-[10px] rounded-md inline-block text-black hover:bg-bgorg hover:text-white transition-all duration-300"
             >
-              Work with Us{" "}
+              Work with Us
               <span className="text-[17px]">
-                <i className="fa fa-angle-right" aria-hidden="true"></i>{" "}
+                <i className="fa fa-angle-right" aria-hidden="true"></i>
               </span>
             </Link>
           </div>

@@ -60,7 +60,7 @@ const InnovativeStrategies = () => {
         >
           <p className="text-bgorg font-semibold text-[20px]">Our Strengths</p>
           <h1 className="sm:text-[35px] text-[25px] font-semibold font-roboto text-gray-800 leading-snug">
-            Fuel Your Growth with BrightenSolutionss' <br /> Unmatched Expertise
+            Fuel Your Growth with BrightenSolutionss <br /> Unmatched Expertise
           </h1>
           <p className="text-gray-500 mt-[15px] lg:w-[80%]">
             At BrightenSolutionss, we redefine success through innovative

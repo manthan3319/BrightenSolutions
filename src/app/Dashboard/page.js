@@ -1,4 +1,6 @@
-import React, { Suspense, lazy } from "react";
+"use client"
+import React, { Suspense, lazy, useState, useEffect } from "react";
+import FullScreenLoader from "../FullScreenLoader/page";
 
 const SliderSection = lazy(() => import("../SliderSection/page"));
 const Experience = lazy(() => import("../Experience/page"));
@@ -12,48 +14,35 @@ const OurLatestBlog = lazy(() => import("../OurLatestBlog/page"));
 const KnowAbout = lazy(() => import("../KnowAbout/page"));
 
 const Dashboard = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 500);
+
+    return () => clearTimeout(timer); 
+  }, []);
+
+  if (isLoading) {
+    return <FullScreenLoader />;
+  }
+
   return (
-    <div>
-      <Suspense fallback={<div>Loading Slider...</div>}>
+    <Suspense fallback={<FullScreenLoader />}>
+      <div>
         <SliderSection />
-      </Suspense>
-
-      <Suspense fallback={<div>Loading Experience...</div>}>
         <Experience />
-      </Suspense>
-
-      <Suspense fallback={<div>Loading Review...</div>}>
         <Review />
-      </Suspense>
-
-      <Suspense fallback={<div>Loading Our Services...</div>}>
         <OurServices />
-      </Suspense>
-
-      <Suspense fallback={<div>Loading Strategies...</div>}>
         <InnovativeStrategies />
-      </Suspense>
-
-      <Suspense fallback={<div>Loading Crafting Websites...</div>}>
         <CraftingWebsites />
-      </Suspense>
-
-      <Suspense fallback={<div>Loading Our Work...</div>}>
         <OurWorkHome />
-      </Suspense>
-
-      <Suspense fallback={<div>Loading Clients...</div>}>
         <OurClint />
-      </Suspense>
-
-      <Suspense fallback={<div>Loading Blogs...</div>}>
         <OurLatestBlog />
-      </Suspense>
-
-      <Suspense fallback={<div>Loading Know About...</div>}>
         <KnowAbout />
-      </Suspense>
-    </div>
+      </div>
+    </Suspense>
   );
 };
 

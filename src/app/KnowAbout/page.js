@@ -63,6 +63,8 @@ const FaqItem = memo(({ faq, activeFaq, toggleFaq }) => {
   );
 });
 
+FaqItem.displayName = "FaqItem";
+
 const KnowAbout = () => {
   const [activeFaq, setActiveFaq] = useState(null);
 

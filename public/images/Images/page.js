@@ -53,8 +53,10 @@ import appDevelopment from "../App Development (2).svg";
 import SEOOptimization from "../SEO Optimization.svg";
 import aboutusimg1 from "../ADBOUTUSIMG_1.svg";
 import EverythingYou from "../Everything You.svg";
+import loader from "../loader gif.gif";
 
 export {
+    loader,
     WebDevelopment,
     EverythingYou,
     aboutusimg1,

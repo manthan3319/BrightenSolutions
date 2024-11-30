@@ -1,6 +1,6 @@
 import localFont from "next/font/local";
 import "./globals.css";
-import '../app/assets/fontawesome/css/all.min.css';
+import '../../public/assets/fontawesome/css/all.min.css';
 import Navbar from "./Navbar/page";
 import Footer from "./Footer/page";
 

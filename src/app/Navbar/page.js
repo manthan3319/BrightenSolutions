@@ -40,7 +40,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`bg-black py-[25px] w-[100%] top-0 z-50 transition-all duration-500 ${
+      className={`bg-black py-[25px] w-[100%] top-0 z-[99999] transition-all duration-500 ${
         isSticky ? "sticky top-0 shadow-lg" : ""
       }`}
     >

@@ -1,9 +1,10 @@
 "use client"
-import React from "react";
+import React,{useState,useEffect,Suspense} from "react";
 import Image from "next/image";
 import { creativecertificate } from "../../../public/images/Images/page";
 import { Typewriter } from "react-simple-typewriter";
 import Link from "next/link";
+import FullScreenLoader from "../FullScreenLoader/page";
 
 const Certificate = () => {
   const certificates = [
@@ -14,13 +15,28 @@ const Certificate = () => {
     { id: 5, image: creativecertificate, title: "Skill Recognition" },
   ];
 
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 500);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return <FullScreenLoader />;
+  }
+
   return (
+    <Suspense fallback={<FullScreenLoader />}>
     <div>
       <div
         className="text-white flex justify-center items-center lg:text-[45px] sm:text-[35px] text-[23px] font-bold w-full md:h-[424px] h-64"
         style={{
-          
-            backgroundImage: `linear-gradient(to bottom ,rgba(0,0,0,0.81), rgba(0,0,0,1.12)),
+
+          backgroundImage: `linear-gradient(to bottom ,rgba(0,0,0,0.81), rgba(0,0,0,1.12)),
         url('/images/galleryBg.png')`,
           backgroundSize: "contain",
           backgroundPosition: "center",
@@ -28,14 +44,14 @@ const Certificate = () => {
         }}
       >
         <Link href='/OurBlog'>
-        <Typewriter
-        words={['Our Badge of Honor']}
-        loop={1}
-        typeSpeed={100}
-        
-        />
+          <Typewriter
+            words={['Our Badge of Honor']}
+            loop={1}
+            typeSpeed={100}
+
+          />
         </Link>
-        
+
       </div>
 
       <div className="py-10 ">
@@ -53,7 +69,7 @@ const Certificate = () => {
               >
                 {/* Image */}
                 <Image
-              
+
                   src={cert.image}
                   alt={cert.title}
                   className=" object-cover transition-transform duration-500 "
@@ -71,6 +87,7 @@ const Certificate = () => {
         </div>
       </div>
     </div>
+    </Suspense>
   );
 };
 

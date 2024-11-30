@@ -1,11 +1,12 @@
 "use client";
-import React from "react";
+import React,{ Suspense, useState, useEffect } from "react";
 import Image from "next/image";
 import { galleryImage1, formImage } from "../../../public/images/Images/page";
 import { Typewriter } from "react-simple-typewriter";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import FullScreenLoader from "../FullScreenLoader/page";
 const Gallery = () => {
   const galleryImage = [
     {
@@ -36,8 +37,23 @@ const Gallery = () => {
     { src: formImage, title: "Carefree Moments" },
   ];
 
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 500);
+
+    return () => clearTimeout(timer); 
+  }, []);
+
+  if (isLoading) {
+    return <FullScreenLoader />;
+  }
+
   return (
-    <div>
+    <Suspense fallback={<FullScreenLoader />}>
+    <div className="overflow-hidden">
       <div
         className="text-white flex justify-center items-center lg:text-[45px] md:text-[38px] text-2xl font-bold w-full md:h-[424px] h-72"
         style={{
@@ -69,22 +85,23 @@ const Gallery = () => {
           a story of celebration and togetherness. Dive into the essence of fun,
           relaxation, and unforgettable experiences captured.
         </p>
-
-        <div className="flex justify-center flex-wrap gap-16 pt-7 m-auto px-3">
-          {galleryImage.map((item, index) => (
-            <div key={index} className="wrapper ">
-              <div className="image-wrapper">
-                <Image src={item.image} alt="hello" width={500} height={300} />
+        <div className="sm:block hidden">
+          <div className="flex justify-center flex-wrap gap-16 pt-7 m-auto px-3 ">
+            {galleryImage.map((item, index) => (
+              <div key={index} className="wrapper ">
+                <div className="image-wrapper">
+                  <Image src={item.image} alt="hello" width={500} height={300} />
+                </div>
+                <div className="header-wrapper">
+                  {item.headers.map((header, idx) => (
+                    <h1 className="h1Class" key={idx}>
+                      {header}
+                    </h1>
+                  ))}
+                </div>
               </div>
-              <div className="header-wrapper">
-                {item.headers.map((header, idx) => (
-                  <h1 className="h1Class" key={idx}>
-                    {header}
-                  </h1>
-                ))}
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
 
@@ -115,6 +132,7 @@ const Gallery = () => {
         </div>
       </div>
     </div>
+    </Suspense>
   );
 };
 

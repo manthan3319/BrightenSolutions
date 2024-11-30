@@ -27,6 +27,7 @@ export const ServicesData = [
     id: 1,
     icon: uiuxicon,
     title: "UI/UX Design",
+    description:"At BrightenSolutions, our UI/UX Design service is dedicated to crafting visually stunning and intuitive digital experiences. We understand that a great design is not just about aesthetics but also about functionality and usability. Our approach blends creativity, user behavior research, and the latest design trends to deliver interfaces that engage users and ensure seamless interactions.",
     pare1:
       "At BrightenSolutions, our UI/UX Design service is dedicated to crafting visually stunning and intuitive digital experiences. We understand that a great design is not just about aesthetics but also about functionality and usability. Our approach blends creativity, user behavior research, and the latest design trends to deliver interfaces that engage users and ensure seamless interactions.",
     pare2:
@@ -47,6 +48,7 @@ export const ServicesData = [
   {
     id: 2,
     icon: webdesignicon,
+    description:"",
     title: "Web Design",
     pare1:
       "BrightenSolutions' Web Design service offers tailored solutions that enhance your digital presence and deliver exceptional user experiences. We focus on creating responsive, clean, and visually striking websites that align with your brand identity. Our designs prioritize usability, ensuring that users can easily navigate and engage with your content.",
@@ -68,6 +70,7 @@ export const ServicesData = [
   {
     id: 3,
     icon: webDevelopment,
+    description:"",
     title: "Web Development",
     pare1:
       "BrightenSolutions' Web Development Service is designed to empower your business with scalable, high-performance websites. Our experienced developers work with cutting-edge technologies to create websites that are not only visually appealing but also secure, responsive, and optimized for search engines.",
@@ -89,6 +92,7 @@ export const ServicesData = [
   {
     id: 4,
     icon: AppDevelopment,
+    description:"",
     title: "App Development",
     pare1:
       "BrightenSolutions provides comprehensive App Development services, creating custom applications tailored to your business needs. Our apps are designed to be user-centric, scalable, and feature-rich, ensuring they deliver exceptional value to both you and your users. From concept to deployment, we handle every stage of the app development process with expertise and precision.",
@@ -110,6 +114,7 @@ export const ServicesData = [
   {
     id: 5,
     icon: SeoMarketing,
+    description:"",
     title: "SEO Optimization",
     pare1:
       "BrightenSolutions' SEO Optimization service is designed to boost your online visibility and drive organic traffic to your website. By implementing advanced SEO techniques and staying up-to-date with search engine algorithm changes, we ensure your business ranks higher in search results.",
@@ -131,6 +136,7 @@ export const ServicesData = [
   {
     id: 6,
     icon: UIUXDesign,
+    description:"",
     title: "Content Creation",
     pare1: `Content is the foundation of a successful digital strategy. At BrightenSolutions, we specialize in creating high-quality, engaging, and SEO-optimized content that resonates with your target audience. From blog posts to videos, we offer a full range of content creation services to meet your needs.`,
     pare2: `Our content creators work closely with you to understand your brand, industry, and goals. By developing a content plan tailored to your audience, we ensure your message is delivered effectively across all channels.`,
@@ -148,6 +154,7 @@ export const ServicesData = [
   {
     id: 7,
     icon: DigitalMarketing,
+    description:"",
     title: "Digital Marketing",
     pare1: `BrightenSolutions offers end-to-end digital marketing solutions tailored to meet your business goals. Our data-driven strategies encompass every aspect of online marketing, ensuring your brand reaches the right audience at the right time. We specialize in content marketing, pay-per-click (PPC) advertising, email marketing, and social media campaigns. With a focus on measurable outcomes, our team helps you achieve better ROI, improved visibility, and consistent growth.`,
     pare2: `Our approach combines creativity with analytical insights, ensuring campaigns are impactful and optimized for maximum performance. From generating brand awareness to driving conversions, we ensure your digital marketing efforts yield tangible results.`,
@@ -164,6 +171,7 @@ export const ServicesData = [
   {
     id: 8,
     icon: SocialMarketing,
+    description:"",
     title: "Social Marketing",
     pare1: `BrightenSolutions specializes in crafting innovative social marketing strategies that help your business connect with its audience. By leveraging platforms like Facebook, Instagram, LinkedIn, and Twitter, we increase engagement, build brand loyalty, and drive meaningful interactions with your customers.`,
     pare2: `Our team of social media experts analyzes your audience demographics and behavior to design targeted campaigns that drive results. From creative content to strategic ad placements, we ensure your brand message is communicated effectively.`,
@@ -180,6 +188,7 @@ export const ServicesData = [
   {
     id: 9,
     icon: GraphicDesign,
+    description:"",
     title: "Graphic Design",
     pare1: `BrightenSolutions offers premium graphic design services to bring your brand vision to life. Our team of creative designers crafts captivating visuals that effectively communicate your message and leave a lasting impression on your audience.`,
     pare2: `From logo creation to marketing collateral, our designs align with your brand identity while maintaining a modern, professional aesthetic. We ensure that every design element enhances your brand presence and resonates with your target audience.`,
@@ -196,6 +205,7 @@ export const ServicesData = [
   {
     id: 10,
     icon: APIIntegration,
+    description:"",
     title: "API Integration",
     pare1: `BrightenSolutions provides seamless API integration services that connect your applications with third-party platforms to enhance functionality and improve efficiency. Our expertise ensures smooth and secure data exchange between systems, enabling you to focus on growing your business.`,
     pare2: `Whether you need to integrate payment gateways, social media platforms, or other external services, our team ensures your systems work together flawlessly. We prioritize security and scalability to ensure long-term success.`,
@@ -212,6 +222,7 @@ export const ServicesData = [
   {
     id: 11,
     icon: Hosting,
+    description:"",
     title: "Hosting",
     pare1: `BrightenSolutions offers reliable and secure hosting solutions to ensure your websites and applications perform optimally. Our hosting services are designed for scalability, speed, and security, giving you peace of mind as your business grows.`,
     pare2: `With 24/7 support and high uptime, we ensure your website remains accessible to your audience at all times. Our hosting infrastructure is optimized for fast load times and seamless user experiences, helping you maintain a professional online presence.`,
